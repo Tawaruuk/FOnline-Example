@@ -1,0 +1,4 @@
+CLIENT_SCREEN_CURSOR       Cursor.fogui
+CLIENT_MAIN_SCREEN_LOGIN   Login.fogui
+CLIENT_SCREEN_REGISTRATION Registration.fogui
+CLIENT_MAIN_SCREEN_GAME    Game.fogui

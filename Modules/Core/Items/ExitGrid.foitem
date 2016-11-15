@@ -1,0 +1,15 @@
+[ProtoItem]
+IsHidden = True
+IsFlat = True
+IsNoBlock = True
+IsShootThru = True
+IsLightThru = True
+PicMap = Blockers/ExitGrid.fofrm
+Type = Grid
+Grid_Type = 1
+
+[Text_russ]
+{1}{}{Отметка клетки выхода на карте}
+
+[Text_engl]
+{1}{}{Exit Grid Map Marker}

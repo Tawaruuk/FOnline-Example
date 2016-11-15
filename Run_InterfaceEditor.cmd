@@ -1,0 +1,1 @@
+START "IE" "Binaries\InterfaceEditor\InterfaceEditor.exe"

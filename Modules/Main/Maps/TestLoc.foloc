@@ -1,0 +1,4 @@
+[ProtoLocation]
+MapProtos = TestMap
+MapEntrances = se_head 0
+AutoGarbage = false

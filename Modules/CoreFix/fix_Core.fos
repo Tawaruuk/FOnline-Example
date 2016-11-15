@@ -1,0 +1,4 @@
+// FOS Common
+
+/* Без этого не запукается КЛИЕНТ */
+/* 694 */ #pragma property Critter Protected        int   Gender 

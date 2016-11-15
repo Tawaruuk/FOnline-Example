@@ -1,0 +1,105 @@
+// FOS Mapper
+// Author: Tawaruuk
+
+//****************************************************************************************************************************** Module initialization
+void ModuleInit()
+{
+	__EventStart.Subscribe( OnStart );
+	__EventRenderIface.Subscribe( OnRenderIface );
+    __EventInspectorProperties.Subscribe(OnInspectorProperties );
+}
+
+//****************************************************************************************************************************** Called on mapper loaded
+void OnStart()
+{
+	Config::InitializeGame();
+	LoadFont(5, "mapper");
+	SetDefaultFont(5, 0xFFCCCCCC);
+
+    hash[] pids = {};
+	int tab;
+
+	tab = TAB_FAST_ITEMS;
+	TabDelete(tab);
+	TabSetName(tab, "MAP");
+	pids.clear();
+    pids.insertLast(Content::Item::Block                );
+    pids.insertLast(Content::Item::BlockLight           );
+    pids.insertLast(Content::Item::Entrance             );
+    pids.insertLast(Content::Item::ExitGrid             );
+    pids.insertLast(Content::Item::Light                );
+    pids.insertLast(Content::Item::MinimapInvisibleBlock);
+    pids.insertLast(Content::Item::ScrollBlock          );
+    pids.insertLast(Content::Item::Trigger              );
+    pids.insertLast(Content::Item::WallLight            );
+    TabSetItemPids(tab, "Special", pids);
+
+	TabSetName(TAB_TILES, "FLR");
+	TabSetTileDirs(TAB_TILES, array<string> = {"Art/Floors/"}, array<bool> = {true});
+
+	TabSetName(TAB_CRITTERS, "CRT");
+}
+
+//****************************************************************************************************************************** Interface render
+// You can use Draw* functions only there.
+// Layer specification (rev 605):
+//    0
+// Game map
+//    1
+// Mapper interface
+//    2
+// Console, MessageBox
+//    3
+// Mapper object interface
+//    4
+// Cursor
+//    5
+void OnRenderIface( uint layer )
+{
+	if( layer == 4 )
+	{
+        // Zoom text
+        DrawText( "" + int(1.0f/__SpritesZoom*100.0f+0.5f) + "%", 870, 10, 100, 20, COLOR_WHITE, 7, 0 );
+    }
+}
+
+//****************************************************************************************************************************** Inspector properties
+void OnInspectorProperties( Entity entity, int[] properties )
+{
+    Item item  = cast< Item >( entity );
+    if( item !is null ) {
+
+        properties = array< int > = {
+            0, 0, 0,
+            ItemProperty::Type,
+            ItemProperty::HexX,
+            ItemProperty::HexY,
+            0,
+            ItemProperty::PicMap,
+            ItemProperty::OffsetX,
+            ItemProperty::OffsetY
+        };
+
+        if( item.IsLight )
+        {
+            properties.insertLast( 0 );
+            properties.insertLast( ItemProperty::LightIntensity );
+            properties.insertLast( ItemProperty::LightDistance  );
+            properties.insertLast( ItemProperty::LightFlags     );
+            properties.insertLast( ItemProperty::LightColor     );
+        }
+    }
+    Critter cr = cast< Critter >( entity );
+    if( cr !is null )
+    {
+        properties = array< int > =
+        {
+            CritterProperty::HexX,
+            CritterProperty::HexY,
+            CritterProperty::Dir,
+            0,
+            CritterProperty::ScriptId
+        };
+    }
+
+}

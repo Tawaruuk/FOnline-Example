@@ -1,0 +1,6 @@
+// FOS Common
+
+#pragma property Global Public uint LocationTestId
+
+#pragma content Location TestLoc
+#pragma content Map      TestMap

@@ -1,0 +1,457 @@
+﻿// FOS Client
+
+// GUI scheme name: Default
+
+void InitializeScreens()
+{
+    Gui::RegisterScreen( CLIENT_SCREEN_CURSOR, GuiScreens::Cursor::CreateScreen );
+    Gui::RegisterScreen( CLIENT_MAIN_SCREEN_LOGIN, GuiScreens::Login::CreateScreen );
+    Gui::RegisterScreen( CLIENT_SCREEN_REGISTRATION, GuiScreens::Registration::CreateScreen );
+    Gui::RegisterScreen( CLIENT_MAIN_SCREEN_GAME, GuiScreens::Game::CreateScreen );
+}
+
+namespace Cursor
+{
+    class Screen : Gui::Screen
+    {
+        void OnConstruct() override
+        {
+            SetCanMove( true, false );
+        }
+    }
+
+    class Cursor : Gui::Panel
+    {
+        Sprite::Sprite CursorDefault = Sprite::Sprite();
+
+        void OnConstruct() override
+        {
+        }
+
+        void OnInit() override
+        {
+            CursorDefault.Load( "Art/Interface/Cursors/default.png" );
+        }
+
+        void OnDraw() override
+        {
+            CursorDefault.Draw( __MouseX, __MouseY, 0, 0, -1, -1 );
+        }
+    }
+
+    Screen CreateScreenHierarchy( Gui::Object parent )
+    {
+        Screen obj = Screen();
+        CreateCursorHierarchy( obj );
+        obj.Init( parent );
+        return obj;
+    }
+
+    Cursor CreateCursorHierarchy( Gui::Object parent )
+    {
+        Cursor obj = Cursor();
+        obj.Init( parent );
+        return obj;
+    }
+
+    Gui::Screen CreateScreen()
+    {
+        return CreateScreenHierarchy( null );
+    }
+}
+
+namespace Login
+{
+    class Screen : Gui::Screen
+    {
+        void OnConstruct() override
+        {
+            SetModal( true );
+            SetCanMove( true, false );
+            SetSize( 1024, 768 );
+            SetBackgroundImage( "Art/Interface/Login_Screen_backg.png " );
+        }
+    }
+
+    class Main : Gui::Panel
+    {
+        void OnConstruct() override
+        {
+            SetPosition( 370, 500 );
+            SetSize( 346, 196 );
+            SetBackgroundImage( "Art/Interface/Login_Main_bg.png" );
+        }
+    }
+
+    class Play : Gui::Panel
+    {
+        void OnConstruct() override
+        {
+            SetPosition( 75, 40 );
+            SetBackgroundImage( "Art/Interface/Login_btnBg_01.png" );
+        }
+    }
+
+    class Button1 : Gui::Button
+    {
+        void OnConstruct() override
+        {
+            SetSize( 27, 22 );
+            SetBackgroundImage( "Art/Interface/Login_btnUp.png" );
+            SetPressedImage( "Art/Interface/Login_btnDn.png" );
+        }
+    }
+
+    class Text1 : Gui::Text
+    {
+        void OnConstruct() override
+        {
+            SetPosition( 35, 7 );
+            SetText( "логин" );
+            SetTextColor( COLOR_LEMON );
+        }
+    }
+
+    class Registration : Gui::Panel
+    {
+        void OnConstruct() override
+        {
+            SetPosition( 75, 140 );
+            SetSize( 152, 24 );
+            SetBackgroundImage( "Art/Interface/Login_btnBg_02.png" );
+        }
+    }
+
+    class Button2 : Gui::Button
+    {
+        void OnConstruct() override
+        {
+            SetSize( 27, 22 );
+            SetBackgroundImage( "Art/Interface/Login_btnUp.png" );
+            SetPressedImage( "Art/Interface/Login_btnDn.png" );
+        }
+
+        void OnLMouseClick() override
+        {
+            //Gui::EngineCallback_HideScreen(CLIENT_MAIN_SCREEN_LOGIN);
+            dictionary params =
+            {
+                { "test", 0 }
+            };
+            Gui::EngineCallback_ShowScreen(CLIENT_SCREEN_REGISTRATION, params);
+        }
+    }
+
+    class Text2 : Gui::Text
+    {
+        void OnConstruct() override
+        {
+            SetPosition( 35, 7 );
+            SetText( "регистер" );
+            SetTextColor( COLOR_LEMON );
+        }
+    }
+
+    class Animation : Gui::Panel
+    {
+        void OnConstruct() override
+        {
+            SetPosition( 25, 65 );
+            SetBackgroundImage( "Art/Interface/ololo.fofrm" );
+        }
+    }
+
+    Screen CreateScreenHierarchy( Gui::Object parent )
+    {
+        Screen obj = Screen();
+        CreateMainHierarchy( obj );
+        obj.Init( parent );
+        return obj;
+    }
+
+    Main CreateMainHierarchy( Gui::Object parent )
+    {
+        Main obj = Main();
+        CreatePlayHierarchy( obj );
+        CreateRegistrationHierarchy( obj );
+        CreateAnimationHierarchy( obj );
+        obj.Init( parent );
+        return obj;
+    }
+
+    Play CreatePlayHierarchy( Gui::Object parent )
+    {
+        Play obj = Play();
+        CreateButton1Hierarchy( obj );
+        CreateText1Hierarchy( obj );
+        obj.Init( parent );
+        return obj;
+    }
+
+    Button1 CreateButton1Hierarchy( Gui::Object parent )
+    {
+        Button1 obj = Button1();
+        obj.Init( parent );
+        return obj;
+    }
+
+    Text1 CreateText1Hierarchy( Gui::Object parent )
+    {
+        Text1 obj = Text1();
+        obj.Init( parent );
+        return obj;
+    }
+
+    Registration CreateRegistrationHierarchy( Gui::Object parent )
+    {
+        Registration obj = Registration();
+        CreateButton2Hierarchy( obj );
+        CreateText2Hierarchy( obj );
+        obj.Init( parent );
+        return obj;
+    }
+
+    Button2 CreateButton2Hierarchy( Gui::Object parent )
+    {
+        Button2 obj = Button2();
+        obj.Init( parent );
+        return obj;
+    }
+
+    Text2 CreateText2Hierarchy( Gui::Object parent )
+    {
+        Text2 obj = Text2();
+        obj.Init( parent );
+        return obj;
+    }
+
+    Animation CreateAnimationHierarchy( Gui::Object parent )
+    {
+        Animation obj = Animation();
+        obj.Init( parent );
+        return obj;
+    }
+
+    Gui::Screen CreateScreen()
+    {
+        return CreateScreenHierarchy( null );
+    }
+}
+
+namespace Registration
+{
+    //dict <CritterProperty, int> RegProps;
+
+    class Screen : Gui::Screen
+    {
+        void OnConstruct() override
+        {
+            SetModal( true );
+            SetPosition( 0, 200 );
+        }
+    }
+
+    class Ok : Gui::Button
+    {
+        void OnConstruct() override
+        {
+            SetPosition( 140, 20 );
+            SetSize( 29, 24 );
+            SetBackgroundImage( "Art/Interface/Registration_btnUp.png" );
+            SetPressedImage( "Art/Interface/Registration_btnDn.png" );
+        }
+
+        void OnLMouseClick() override
+        {
+            string propsStr = "";
+            //for( uint i = 0; i < RegProps.length(); i++ )
+                //    if( RegProps.getValue( i ) != 0 )
+                //        propsStr += " " + RegProps.getKey( i ) + " " + RegProps.getValue( i );
+            CustomCall( "Register" + propsStr );
+            
+            Gui::EngineCallback_HideScreen(CLIENT_SCREEN_REGISTRATION);
+            Gui::EngineCallback_HideScreen(CLIENT_MAIN_SCREEN_LOGIN);
+            
+            dictionary params =
+            {
+                { "test", 0 }
+            };
+            Gui::EngineCallback_ShowScreen(CLIENT_MAIN_SCREEN_GAME, params);
+        }
+    }
+
+    class Panel1 : Gui::Panel
+    {
+        void OnConstruct() override
+        {
+            SetSize( 132, 22 );
+            SetBackgroundImage( "Art/Interface/Registration_inputBg.png" );
+        }
+    }
+
+    class Login : Gui::TextInput
+    {
+        void OnConstruct() override
+        {
+            SetPosition( 15, 7 );
+            SetSize( 100, 15 );
+            SetText( "логин" );
+        }
+
+        void OnInput( uint8 key, string text ) override
+        {
+            __RegName = Text;
+        }
+    }
+
+    class Panel2 : Gui::Panel
+    {
+        void OnConstruct() override
+        {
+            SetPosition( 0, 22 );
+            SetSize( 132, 22 );
+            SetBackgroundImage( "Art/Interface/Registration_inputBg.png" );
+        }
+    }
+
+    class Password : Gui::TextInput
+    {
+        void OnConstruct() override
+        {
+            SetPosition( 15, 7 );
+            SetSize( 100, 15 );
+            SetText( "пороль" );
+        }
+
+        void OnInput( uint8 key, string text ) override
+        {
+            __RegPassword = Text;
+        }
+    }
+
+    Screen CreateScreenHierarchy( Gui::Object parent )
+    {
+        Screen obj = Screen();
+        CreateOkHierarchy( obj );
+        CreatePanel1Hierarchy( obj );
+        CreatePanel2Hierarchy( obj );
+        obj.Init( parent );
+        return obj;
+    }
+
+    Ok CreateOkHierarchy( Gui::Object parent )
+    {
+        Ok obj = Ok();
+        obj.Init( parent );
+        return obj;
+    }
+
+    Panel1 CreatePanel1Hierarchy( Gui::Object parent )
+    {
+        Panel1 obj = Panel1();
+        CreateLoginHierarchy( obj );
+        obj.Init( parent );
+        return obj;
+    }
+
+    Login CreateLoginHierarchy( Gui::Object parent )
+    {
+        Login obj = Login();
+        obj.Init( parent );
+        return obj;
+    }
+
+    Panel2 CreatePanel2Hierarchy( Gui::Object parent )
+    {
+        Panel2 obj = Panel2();
+        CreatePasswordHierarchy( obj );
+        obj.Init( parent );
+        return obj;
+    }
+
+    Password CreatePasswordHierarchy( Gui::Object parent )
+    {
+        Password obj = Password();
+        obj.Init( parent );
+        return obj;
+    }
+
+    Gui::Screen CreateScreen()
+    {
+        return CreateScreenHierarchy( null );
+    }
+}
+
+namespace Game
+{
+    class Screen : Gui::Screen
+    {
+        void OnConstruct() override
+        {
+            SetModal( true );
+            SetCanMove( true, false );
+            SetSize( 1024, 768 );
+            SetDock( DOCK_FILL );
+            SetNotHittable( true );
+        }
+
+        void OnGlobalMouseDown( int button ) override
+        {
+            uint16 x = 0;
+            uint16 y = 0;
+            if (GetMonitorHex(__MouseX, __MouseY, x, y)) {
+                bool run = Input::IsShiftDown();
+                PlayerActions::MoveTo(x, y, run);
+            }
+        }
+    }
+
+    class Main : Gui::Panel
+    {
+        void OnConstruct() override
+        {
+            SetPosition( 0, 568 );
+            SetSize( 1024, 200 );
+            SetAnchor( ANCHOR_LEFT| ANCHOR_RIGHT| ANCHOR_BOTTOM );
+            SetCheckTransparentOnHit( true );
+            SetBackgroundImage( "Art/Interface/Game_Main_bg.png" );
+        }
+    }
+
+    class MessageBox1 : Gui::MessageBox
+    {
+        void OnConstruct() override
+        {
+            SetPosition( 40, 615 );
+            SetSize( 240, 140 );
+        }
+    }
+
+    Screen CreateScreenHierarchy( Gui::Object parent )
+    {
+        Screen obj = Screen();
+        CreateMainHierarchy( obj );
+        CreateMessageBox1Hierarchy( obj );
+        obj.Init( parent );
+        return obj;
+    }
+
+    Main CreateMainHierarchy( Gui::Object parent )
+    {
+        Main obj = Main();
+        obj.Init( parent );
+        return obj;
+    }
+
+    MessageBox1 CreateMessageBox1Hierarchy( Gui::Object parent )
+    {
+        MessageBox1 obj = MessageBox1();
+        obj.Init( parent );
+        return obj;
+    }
+
+    Gui::Screen CreateScreen()
+    {
+        return CreateScreenHierarchy( null );
+    }
+}

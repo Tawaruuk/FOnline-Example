@@ -1,0 +1,58 @@
+[ProtoItem]##################################################### PROTO
+$Name       = _FirePlace
+Info        = 1
+Type        = Generic
+IsCanUse    = False
+IsCanPickUp = False
+
+DisableEgg  = True
+
+IsNoBlock   = False
+IsShootThru = True
+IsLightThru = True
+
+IsFlat      = False
+
+[ProtoItem]#####################################################
+$Parent = _FirePlace
+$Name   =  FirePlace_01
+Info    = 3
+
+PicMap  = Art/Items/FirePlace_01_NE.til
+OffsetX = 0
+OffsetY = 5
+
+BlockLines       = 610121
+
+[ProtoItem]#####################################################
+    $Parent = FirePlace_01
+    $Name   = FirePlace_02
+    PicMap  = Art/Items/FirePlace_02_NE.til
+
+[ProtoItem]#####################################################
+$Parent = _FirePlace
+$Name   =  FirePlace_Small_01
+Info    = 5
+
+PicMap  = Art/Items/FirePlace_Small_01_NE.til
+
+OffsetX = 0
+OffsetY = 10
+
+################################################################ TEXT
+[Text_russ]
+{1}{}{Адский костер}
+{2}{}{Этот костер пылает во имя Сатаны!}
+{3}{}{Адское костровище}
+{4}{}{Жги грешников в огне Преисподней!}
+{5}{}{Адский костерок}
+{6}{}{Этот маленький костерок пылает во имя Сатаны!}
+
+[Text_engl]
+{1}{}{Адский костер}
+{2}{}{Этот костер пылает во имя Сатаны!}
+{3}{}{Адское костровище}
+{4}{}{Жги грешников в огне Преисподней!}
+{5}{}{Адский костерок}
+{6}{}{Этот маленький костерок пылает во имя Сатаны!}
+################################################################

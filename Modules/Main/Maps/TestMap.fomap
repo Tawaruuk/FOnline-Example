@@ -1,0 +1,1258 @@
+[ProtoMap]
+CurDayTime = 900
+DayColor = 18 128 103 51 18 128 95 40 53 128 86 29
+DayTime = 300 600 1140 1380
+Height = 50
+Width = 50
+WorkHexX = 5
+WorkHexY = 19
+
+[Critter]
+$Id = 4294967294
+$Proto = Test
+Dir = 3
+HexX = 11
+HexY = 3
+
+[Item]
+$Id = 4294967295
+$Proto = FirePlace_Small_01
+Accessory = MapHex
+HexX = 6
+HexY = 4
+
+[Tile]
+HexX = 1
+HexY = 0
+PicMap = Art/Floors/City_Floor_Gravel_PARKGrassCentre_F_1_NE.png
+
+[Tile]
+HexX = 3
+HexY = 0
+PicMap = Art/Floors/City_Floor_Gravel_PARKGrassCentre_F_1_NE.png
+
+[Tile]
+HexX = 5
+HexY = 0
+PicMap = Art/Floors/City_Floor_Gravel_PARKGrassCentre_F_1_NE.png
+
+[Tile]
+HexX = 7
+HexY = 0
+PicMap = Art/Floors/City_Floor_Gravel_PARKGrassCentre_F_1_NE.png
+
+[Tile]
+HexX = 1
+HexY = 2
+PicMap = Art/Floors/City_Floor_Gravel_PARKGrassCentre_F_1_NE.png
+
+[Tile]
+HexX = 3
+HexY = 2
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 5
+HexY = 2
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 7
+HexY = 2
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 9
+HexY = 2
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 11
+HexY = 2
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 13
+HexY = 2
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 15
+HexY = 2
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 17
+HexY = 2
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 19
+HexY = 2
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 21
+HexY = 2
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 23
+HexY = 2
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 25
+HexY = 2
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 27
+HexY = 2
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 29
+HexY = 2
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 31
+HexY = 2
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 1
+HexY = 4
+PicMap = Art/Floors/City_Floor_Gravel_PARKGrassCentre_F_1_NE.png
+
+[Tile]
+HexX = 3
+HexY = 4
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 5
+HexY = 4
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 7
+HexY = 4
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 9
+HexY = 4
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 11
+HexY = 4
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 13
+HexY = 4
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 15
+HexY = 4
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 17
+HexY = 4
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 19
+HexY = 4
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 21
+HexY = 4
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 23
+HexY = 4
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 25
+HexY = 4
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 27
+HexY = 4
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 29
+HexY = 4
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 31
+HexY = 4
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 1
+HexY = 6
+PicMap = Art/Floors/City_Floor_Gravel_PARKGrassCentre_F_1_NE.png
+
+[Tile]
+HexX = 3
+HexY = 6
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 5
+HexY = 6
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 7
+HexY = 6
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 9
+HexY = 6
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 11
+HexY = 6
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 13
+HexY = 6
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 15
+HexY = 6
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 17
+HexY = 6
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 19
+HexY = 6
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 21
+HexY = 6
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 23
+HexY = 6
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 25
+HexY = 6
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 27
+HexY = 6
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 29
+HexY = 6
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 31
+HexY = 6
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 3
+HexY = 8
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 5
+HexY = 8
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 7
+HexY = 8
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 9
+HexY = 8
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 11
+HexY = 8
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 13
+HexY = 8
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 15
+HexY = 8
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 17
+HexY = 8
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 19
+HexY = 8
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 21
+HexY = 8
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 23
+HexY = 8
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 25
+HexY = 8
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 27
+HexY = 8
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 29
+HexY = 8
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 31
+HexY = 8
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 3
+HexY = 10
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 5
+HexY = 10
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 7
+HexY = 10
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 9
+HexY = 10
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 11
+HexY = 10
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 13
+HexY = 10
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 15
+HexY = 10
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 17
+HexY = 10
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 19
+HexY = 10
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 21
+HexY = 10
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 23
+HexY = 10
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 25
+HexY = 10
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 27
+HexY = 10
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 29
+HexY = 10
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 31
+HexY = 10
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 3
+HexY = 12
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 5
+HexY = 12
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 7
+HexY = 12
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 9
+HexY = 12
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 11
+HexY = 12
+PicMap = Art/Floors/City_Floor_Gravel_PARKGrassCentre_F_1_NE.png
+
+[Tile]
+HexX = 13
+HexY = 12
+PicMap = Art/Floors/City_Floor_Gravel_PARKGrassCentre_F_1_NE.png
+
+[Tile]
+HexX = 15
+HexY = 12
+PicMap = Art/Floors/City_Floor_Gravel_PARKGrassCentre_F_1_NE.png
+
+[Tile]
+HexX = 17
+HexY = 12
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 19
+HexY = 12
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 21
+HexY = 12
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 23
+HexY = 12
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 25
+HexY = 12
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 27
+HexY = 12
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 29
+HexY = 12
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 31
+HexY = 12
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 3
+HexY = 14
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 5
+HexY = 14
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 7
+HexY = 14
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 9
+HexY = 14
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 11
+HexY = 14
+PicMap = Art/Floors/City_Floor_Gravel_PARKGrassCentre_F_1_NE.png
+
+[Tile]
+HexX = 13
+HexY = 14
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 15
+HexY = 14
+PicMap = Art/Floors/City_Floor_Gravel_PARKGrassCentre_F_1_NE.png
+
+[Tile]
+HexX = 17
+HexY = 14
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 19
+HexY = 14
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 21
+HexY = 14
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 23
+HexY = 14
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 25
+HexY = 14
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 27
+HexY = 14
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 29
+HexY = 14
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 31
+HexY = 14
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 3
+HexY = 16
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 5
+HexY = 16
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 7
+HexY = 16
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 9
+HexY = 16
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 11
+HexY = 16
+PicMap = Art/Floors/City_Floor_Gravel_PARKGrassCentre_F_1_NE.png
+
+[Tile]
+HexX = 13
+HexY = 16
+PicMap = Art/Floors/City_Floor_Gravel_PARKGrassCentre_F_1_NE.png
+
+[Tile]
+HexX = 15
+HexY = 16
+PicMap = Art/Floors/City_Floor_Gravel_PARKGrassCentre_F_1_NE.png
+
+[Tile]
+HexX = 17
+HexY = 16
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 19
+HexY = 16
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 21
+HexY = 16
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 23
+HexY = 16
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 25
+HexY = 16
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 27
+HexY = 16
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 29
+HexY = 16
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 31
+HexY = 16
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 3
+HexY = 18
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 5
+HexY = 18
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 7
+HexY = 18
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 9
+HexY = 18
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 11
+HexY = 18
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 13
+HexY = 18
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 15
+HexY = 18
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 17
+HexY = 18
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 19
+HexY = 18
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 21
+HexY = 18
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 23
+HexY = 18
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 25
+HexY = 18
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 27
+HexY = 18
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 29
+HexY = 18
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 31
+HexY = 18
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 3
+HexY = 20
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 5
+HexY = 20
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 7
+HexY = 20
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 9
+HexY = 20
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 11
+HexY = 20
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 13
+HexY = 20
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 15
+HexY = 20
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 17
+HexY = 20
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 19
+HexY = 20
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 21
+HexY = 20
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 23
+HexY = 20
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 25
+HexY = 20
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 27
+HexY = 20
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 29
+HexY = 20
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 31
+HexY = 20
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 3
+HexY = 22
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 5
+HexY = 22
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 7
+HexY = 22
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 9
+HexY = 22
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 11
+HexY = 22
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 13
+HexY = 22
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 15
+HexY = 22
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 17
+HexY = 22
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 19
+HexY = 22
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 21
+HexY = 22
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 23
+HexY = 22
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 25
+HexY = 22
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 27
+HexY = 22
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 29
+HexY = 22
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 31
+HexY = 22
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 3
+HexY = 24
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 5
+HexY = 24
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 7
+HexY = 24
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 9
+HexY = 24
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 11
+HexY = 24
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 13
+HexY = 24
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 15
+HexY = 24
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 17
+HexY = 24
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 19
+HexY = 24
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 21
+HexY = 24
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 23
+HexY = 24
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 25
+HexY = 24
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 27
+HexY = 24
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 29
+HexY = 24
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 31
+HexY = 24
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 3
+HexY = 26
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 5
+HexY = 26
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 7
+HexY = 26
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 9
+HexY = 26
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 11
+HexY = 26
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 13
+HexY = 26
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 15
+HexY = 26
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 17
+HexY = 26
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 19
+HexY = 26
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 21
+HexY = 26
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 23
+HexY = 26
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 25
+HexY = 26
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 27
+HexY = 26
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 29
+HexY = 26
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 31
+HexY = 26
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 3
+HexY = 28
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 5
+HexY = 28
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 7
+HexY = 28
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 9
+HexY = 28
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 11
+HexY = 28
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 13
+HexY = 28
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 15
+HexY = 28
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 17
+HexY = 28
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 19
+HexY = 28
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 21
+HexY = 28
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 23
+HexY = 28
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 25
+HexY = 28
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 27
+HexY = 28
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 29
+HexY = 28
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 31
+HexY = 28
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 3
+HexY = 30
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 5
+HexY = 30
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 7
+HexY = 30
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 9
+HexY = 30
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 11
+HexY = 30
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 13
+HexY = 30
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 15
+HexY = 30
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 17
+HexY = 30
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 19
+HexY = 30
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 21
+HexY = 30
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 23
+HexY = 30
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 25
+HexY = 30
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 27
+HexY = 30
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 29
+HexY = 30
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 31
+HexY = 30
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 3
+HexY = 32
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 5
+HexY = 32
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 7
+HexY = 32
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 9
+HexY = 32
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 11
+HexY = 32
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 13
+HexY = 32
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 15
+HexY = 32
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 17
+HexY = 32
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 19
+HexY = 32
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 21
+HexY = 32
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 23
+HexY = 32
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 25
+HexY = 32
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 27
+HexY = 32
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 29
+HexY = 32
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+
+[Tile]
+HexX = 31
+HexY = 32
+PicMap = Art/Floors/Cave_Floor_Gravel_DirtRockCentre_F_1_NE.png
+

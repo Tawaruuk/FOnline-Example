@@ -1,0 +1,77 @@
+// FOS Client
+
+#define CLIENT_SCREEN_REGISTRATION    ( 10 )
+
+void ModuleInit()
+{
+	Config::InitializeGame();
+
+	__EventStart      .Subscribe( OnStart       );
+	__EventRenderIface.Subscribe( OnRenderIface );
+    __EventMessageBox .Subscribe( OnMessageBox  );
+    __EventMouseDown  .Subscribe( OnMouseDown   );
+
+    __EventCritterIn  .Subscribe( OnCritterIn   );
+
+    Log("Module Init");
+}
+
+void OnCritterIn( Critter cr )
+{
+    if(cr.IsPlayer()) {
+        Gui::EngineCallback_HideScreen(CLIENT_MAIN_SCREEN_LOGIN);
+        Gui::EngineCallback_ShowScreen(CLIENT_MAIN_SCREEN_GAME, null);
+    }
+}
+
+void OnMessageBox( string& messageText, int messageType, bool scriptCall )
+{
+    Gui::MessageBox@[] messageBoxes = Gui::CollectMessageBoxes();
+    for( uint i = 0; i < messageBoxes.length(); i++ )
+        messageBoxes[ i ].AddMessage( messageText, messageType );
+}
+
+bool OnStart()
+{
+	Gui::EngineCallback_Start();
+	Gui::EngineCallback_ShowScreen(CLIENT_MAIN_SCREEN_LOGIN, null);
+	return true;
+}
+
+//****************************************************************************************************************************** Interface render
+// You can use Draw* functions only there.
+// Layer specification (rev 605):
+//    1
+// Game map
+//    2, 3
+// PopUp menu, Cursor
+//    4
+//
+// Extra layers:
+// Global map
+//    100 (over map), 101 (over all)
+void OnRenderIface( uint layer )
+{
+	if( layer == 2 )
+	{
+		Gui::EngineCallback_Draw();
+	}
+	if( layer == 4 )
+	{
+		Gui::EngineCallback_DrawCursor();
+	}
+}
+
+bool OnMouseDown( int button )
+{
+     if( __MapZooming && __SpritesZoomMin != __SpritesZoomMax )
+    {
+        if( button == MOUSE_BUTTON_WHEEL_UP )
+            ChangeZoom( __SpritesZoom * 0.5f );
+        else if( button == MOUSE_BUTTON_WHEEL_DOWN )
+            ChangeZoom( __SpritesZoom * 2.0f );
+        else if( button == MOUSE_BUTTON_MIDDLE )
+            ChangeZoom( 1.0 );
+    }
+    return true;
+}

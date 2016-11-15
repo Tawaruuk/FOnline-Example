@@ -1,2 +1,1 @@
-# FOnline-Example
-FOnline SDK Example
+W A R   N E V E R   C H A N G E S   !

@@ -1,0 +1,67 @@
+// FOS Client
+// Автор: Tawaruuk
+
+bool    MoveIsActive = false; // В данный момент персонаж игрока перемещается?
+uint16  MoveTo_X     = 0;     // Координаты точки назначения
+uint16  MoveTo_Y     = 0;
+bool    MoveRun      = false; // Нужно бежать?
+
+//****************************************************************************************************************************** Инициализация модуля
+void ModuleInit()
+{
+    __EventLoop.Subscribe( ProcessActions ); // Бесконечный цикл бытия...
+}
+
+//****************************************************************************************************************************** Запуск процесса перемещения персонажа
+void MoveTo( uint16 x, uint16 y, bool run=false ) /*EXPORT*/
+{
+    MoveTo_X     = x;
+    MoveTo_Y     = y;
+    MoveRun      = run;
+    MoveIsActive = true;
+
+    // Item msg test ??
+    Item@[] items = GetMapHexItems( x, y );
+    if ( items.length() > 0 ) {
+        Message( GetMsgStr( TEXTMSG_ITEM, ITEMSTR(items[0].ProtoId, items[0].Info ) ) );
+        Message( GetMsgStr( TEXTMSG_ITEM, ITEMSTR(items[0].ProtoId, items[0].Info+1 ) ) );
+
+    }
+
+}
+
+//****************************************************************************************************************************** Итерация выполнения действий
+void ProcessActions()
+{
+    Critter@ player = GetChosen();
+    if ( player is null ) return;
+    if (!player.IsFree()) return; // Иначе в клиенте перемещение отображается слишком быстро
+    if ( player.IsDead()) {
+        MoveIsActive = false; // Мертвым уже не нужно никуда идти...
+        return;
+    }
+//--- Перемещение персонажа игрока ---------------------------------------------------------------------------------------------
+    MoveIsActive = MoveIsActive && ( (player.HexX != MoveTo_X) || (player.HexY != MoveTo_Y) );
+    if (MoveIsActive) {
+        player.IsRunning = MoveRun;
+
+        /* Поиск пути */
+        uint cut=0; //?? НУЖНО ПОНЯТЬ ЧТО ЭТО
+        uint8[]@ path = GetPath( player.HexX, player.HexY, MoveTo_X, MoveTo_Y, cut );
+
+        /* Если путь нашли, то делаем один шажок */
+        if (path !is null) {
+            uint16 x_next = player.HexX;
+            uint16 y_next = player.HexY;
+            MoveHexByDir(x_next, y_next, path[0], 1);
+            // Первый bool параметр отвечает за вращение персонажа по ходу движения, второй - ХЗ за что
+            CustomCall( "TransitCritter " + x_next + " " + y_next + " true false" );
+            CustomCall( "RebuildLookBorders" );
+            // Сообщаем о своем перемещении серверу
+            CustomCall( "SendMove " + path[0]);
+        } else {
+            MoveIsActive = false;
+        }
+    }
+//--- --------------------------------------------------------------------------------------------------------------------------
+}

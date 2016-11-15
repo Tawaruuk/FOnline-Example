@@ -1,0 +1,35 @@
+// FOS Common
+
+
+#pragma content Item Block
+#pragma content Item BlockLight
+#pragma content Item Entrance
+#pragma content Item ExitGrid
+#pragma content Item Light
+#pragma content Item MinimapInvisibleBlock
+#pragma content Item ScrollBlock
+#pragma content Item Trigger
+#pragma content Item WallLight
+
+#pragma content Item FirePlace_01
+#pragma content Item FirePlace_02
+#pragma content Item FirePlace_Small_01
+
+#ifdef __MAPPER
+void ModuleInit() { __EventStart.Subscribe( OnStart ); }
+void OnStart()
+{
+    hash[] pids = {};
+
+    int tab = TAB_CUSTOM9;
+	TabDelete(tab);
+	TabSetName(tab, "test");
+
+    pids.clear();
+    pids.insertLast(Content::Item::FirePlace_01);
+    pids.insertLast(Content::Item::FirePlace_02);
+    pids.insertLast(Content::Item::FirePlace_Small_01);
+    TabSetItemPids(tab, "Костер", pids);
+
+}
+#endif
