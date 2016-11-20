@@ -1,30 +1,22 @@
 // FOS Common Sort -9
 // Author: Tawaruuk
-
-
-
-// ?? ПУСТЬ ПОКА ТУТ БУДЕТ
-#pragma enum ItemType Roof = 20
-
-
-
-
 // Game configuration for server/client/mapper, call in ModuleInit functions
 
 #ifndef __COMPILER
 
-//****************************************************************************************************************************** Server and client initialization
+//__________________________________________________________________________________________________________________________________________________________________________
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////   SERVER and CLIENT   /////////////////////
 # ifndef __MAPPER
 void InitializeGame() //EXPORT//
 {
 
-//--- Init visibility check (see core.fos) -------------------------------------------------------------------------------------
+//--- Visibility and sneak check (see core.fos) --------------------------------------------------------------------------------
     __LookMinimum   = 3;
 
     __LookChecks    = 0;
     //__LookChecks |= LOOK_CHECK_SCRIPT; // ...all other defines ignored ?? Really?
-    //__LookChecks |= LOOK_CHECK_ITEM_SCRIPT;
-    /*
+    //__LookChecks |= LOOK_CHECK_ITEM_SCRIPT; // This option turn on OnMapCheckLook event
+
     __LookChecks   |= LOOK_CHECK_DIR;
     __LookDir0      =  0; // Nerfe % of look radius with direct look
     __LookDir1      = 20; // Nerfe % of look radius with front side look
@@ -40,166 +32,145 @@ void InitializeGame() //EXPORT//
     __LookSneakDir2 = 30; // Nerfe % of opponent sneak with back side look
     __LookSneakDir3 =  0; // Nerfe % of opponent sneak with back look
     __LookSneakDir4 =  0; // Nerfe % of opponent sneak with back look (Square geometry)
-    */
+
     __LookChecks   |= LOOK_CHECK_SNEAK_WEIGHT;
 
-    __SneakDivider  = 6; // ?? I dont know, what is
+    __SneakDivider  =  6; // ?? I dont know, what is
 
     // Properties behaviours
-    SetPropertyGetCallback( CritterProperty::LookDistance, Parameters::CritterSetLookDistance );
+    SetPropertyGetCallback( CritterProperty::LookDistance    , Parameters::CritterSetLookDistance     );
     #  ifndef __CLIENT
     SetPropertyGetCallback( CritterProperty::SneakCoefficient, Parameters::CritterGetSneakCoefficient );
     # endif
 
 //--- Init global vars ---------------------------------------------------------------------------------------------------------
 
-    __ScriptRunSuspendTimeout   = 10000; // In milliseconds
-    __ScriptRunMessageTimeout   = 5000;  // In milliseconds
-    __DisableTcpNagle           = true;
-    __DisableZlibCompression    = false;
-    __FloodSize                 = 2048;  // In bytes
-    __BruteForceTick            = 100;   // In milliseconds
-    __NoAnswerShuffle           = false;
+    __ScriptRunSuspendTimeout  = 10000; // In milliseconds
+    __ScriptRunMessageTimeout  = 5000 ; // In milliseconds
 
-    __CritterIdleTick           = 10000;
-    __Breaktime                 = 1200;
-    __TimeoutTransfer           = 0;
-    //__TimeoutBattle             = REAL_SECOND( 45 ); ?? 681: No matching signatures to 'REAL_SECOND'
-    __RtAlwaysRun               = false;
-    __RunOnCombat               = false;
-    __RunOnTransfer             = true;
-    __GlobalMapWidth            = 28;     // Maximum 100
-    __GlobalMapHeight           = 30;     // Maximum 100
-    __GlobalMapZoneLength       = 50;     // Maximum 500
-    __DeadHitPoints             = -20;
-    __BagRefreshTime            = 60;     // Real minutes
-    __WisperDist                = 2;
-    __ShoutDist                 = 400;
-    __RegistrationTimeout       = 5 * 60 * 0/* debug */;  // In real seconds, 0 to disable
-    __AccountPlayTime           = 10 * 60 * 0/* debug */; // In real seconds, 0 to disable
-    __TalkDistance              = 3;
-    __NpcMaxTalkers             = 1;
-    __MinNameLength             = 4;       // Minimum 1
-    __MaxNameLength             = 12;      // Maximum 30
-    __DlgTalkMinTime            = 100000;
-    __DlgBarterMinTime          = 50000;
-    __MinimumOfflineTime        = 180000;  // 3 minutes
+    __DisableTcpNagle          = true ;
+    __DisableZlibCompression   = false;
+    __FloodSize                = 2048 ; // In bytes
+    __BruteForceTick           = 100  ; // In milliseconds
+    __NoAnswerShuffle          = false;
 
+    __CritterIdleTick          = 10000;
+    __Breaktime                = 1200 ;
+    __TimeoutTransfer          = 0    ;
+    //__TimeoutBattle            = REAL_SECOND( 45 ); ?? 688: No matching signatures to 'REAL_SECOND'
+    __RtAlwaysRun              = false;
+    __RunOnCombat              = false;
+    __RunOnTransfer            = true ;
+    __GlobalMapWidth           = 28   ; // Maximum 100
+    __GlobalMapHeight          = 30   ; // Maximum 100
+    __GlobalMapZoneLength      = 50   ; // Maximum 500
+    __DeadHitPoints            = -20  ;
+    __BagRefreshTime           = 60   ; // Real minutes
+    __WisperDist               = 2    ;
+    __ShoutDist                = 400  ;
+    __RegistrationTimeout      =  5 * 60 * 0/* DEBUG */;  // In real seconds, 0 to disable
+    __AccountPlayTime          = 10 * 60 * 0/* DEBUG */; // In real seconds, 0 to disable
+    __TalkDistance             = 3    ;
+    __NpcMaxTalkers            = 1    ;
+    __DlgTalkMinTime           = 100000;
+    __DlgBarterMinTime         = 50000 ;
+    __MinimumOfflineTime       = 180000;  // 3 minutes
 
-
-
+    // Rules for player name
+    __MinNameLength            = 4    ; // Minimum 1
+    __MaxNameLength            = 12   ; // Maximum 30
+    __ValidNameLettersCommon   = "_ .-1234567890";
+    __ValidNameLettersCulture1 = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
+    __ValidNameLettersCulture2 = "АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя";
 
 //--- Client specific definitions ----------------------------------------------------------------------------------------------
 
     # ifdef __CLIENT
 
+    __MapZooming            = true ; // Allow changing __SpritesZoom
+    __RoofAlpha             = 200  ;
+    __SpritesZoomMax        = 2.5f ;
+    __SpritesZoomMin        = 0.2f ;
 
-    __MapZooming = true; // Allow changing __SpritesZoom
-
-    __RoofAlpha             = 200;
     __HideCursor            = false;
     __DisableMouseEvents    = false;
     __DisableKeyboardEvents = false;
-    __HidePassword          = true;
+    __HidePassword          = true ;
+
     __PlayerOffAppendix     = "|0x44ffffff  (off)";
-    __SpritesZoomMax        = 2.5f;
-    __SpritesZoomMin        = 0.2f;
-    // __AlwaysRun Specifed in config
-    __AlwaysRunMoveDist     = 1;
-    __AlwaysRunUseDist      = 5;
-    __CritterFidgetTime     = 50000;
+
+    //__AlwaysRun Specifed in config <
+    //__AlwaysRunMoveDist     = 1;   < ?? Пока нам это не нужно
+    //__AlwaysRunUseDist      = 5;   <
+
+    __CritterFidgetTime     = 50000; //?? Что это?
+
     //__Anim2CombatBegin      = ANIM2_BEGIN_COMBAT;      <
     //__Anim2CombatIdle       = ANIM2_IDLE_COMBAT;       < ?? ИНАЧЕ НЕ ПУСКАЕТСЯ 681
     //__Anim2CombatEnd        = ANIM2_END_COMBAT;        <
+
     __ConsoleHistorySize    = 20;
 
-    // Chosen lighting
     __ChosenLightColor      = 0xFFFFFF;
     __ChosenLightDistance   = 4;
     __ChosenLightIntensity  = 50;
-    __ChosenLightFlags      = 0; // LIGHT_* in _defines.fos
+    __ChosenLightFlags      = 0; //?? Как использовать?
 
     // 3d rendering
     __Enable3dRendering     = false;
-    #   ifdef PLAYERS_3D
-    __Enable3dRendering     = true;
-    __Animation3dSmoothTime = 150;
-    __Animation3dFPS        = 30;
-    __MultiSampling         = -1;
-    #   endif
+
+
     # endif
-
-
-//--- Enable slots -------------------------------------------------------------------------------------------------------------
-
-    AllowSlot( SLOT_INV, false );
-    AllowSlot( SLOT_HAND1, true );
-    AllowSlot( SLOT_HAND2, false );
-    AllowSlot( SLOT_ARMOR, true );
-    #  ifdef PLAYERS_3D
-    #   ifndef PLAYERS_3D_NO_HEAD
-    AllowSlot( SLOT_HEAD, false );
-    #   endif
-    #  endif
 
 //--- --------------------------------------------------------------------------------------------------------------------------
 
-    // Valid name letters
-    __ValidNameLettersCommon = "_ .-1234567890";
-    __ValidNameLettersCulture1 = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
-    __ValidNameLettersCulture2 = "АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя";
+    AllowSlot( SLOT_INV  , false );
+    AllowSlot( SLOT_HAND1, true  );
+    AllowSlot( SLOT_HAND2, false );
+    AllowSlot( SLOT_ARMOR, true  );
 
-    // Geometry
     InitializeGeometry();
 }
 # endif // !__MAPPER
 
-//****************************************************************************************************************************** Mapper initialization
+//__________________________________________________________________________________________________________________________________________________________________________
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////   MAPPER   ////////////////////////////////
+
 # ifdef __MAPPER
 void InitializeGame() /* EXPORT */
 {
-    __RoofAlpha             = 200;
+    __RoofAlpha             = 200  ;
     __SpritesZoomMax        = 10.0f;
-    __SpritesZoomMin        = 0.2f;
-    //__Anim2CombatBegin      = ANIM2_BEGIN_COMBAT;      <
-    //__Anim2CombatIdle       = ANIM2_IDLE_COMBAT;       < ?? ИНАЧЕ НЕ ПУСКАЕТСЯ 681
-    //__Anim2CombatEnd        = ANIM2_END_COMBAT;        <
+    __SpritesZoomMin        = 0.2f ;
     __SplitTilesCollection  = false;
-    __ConsoleHistorySize    = 100;
+    __ConsoleHistorySize    = 100  ;
 
-    // 3D rendering
+    //__Anim2CombatBegin      = ANIM2_BEGIN_COMBAT;  <
+    //__Anim2CombatIdle       = ANIM2_IDLE_COMBAT;   < ?? ИНАЧЕ НЕ ПУСКАЕТСЯ 691
+    //__Anim2CombatEnd        = ANIM2_END_COMBAT;    <
+
     __Enable3dRendering     = false;
-	/*#  ifdef PLAYERS_3D  ?? ПОКА НЕ НУЖНО
-    __Enable3dRendering     = true;
-    __Animation3dSmoothTime = 150;
-    __Animation3dFPS        = 30;
-    __MultiSampling         = -1;
-    #  endif
-    // / Head slots allow here
-    #  ifdef PLAYERS_3D
-    #   ifndef PLAYERS_3D_NO_HEAD
-    AllowSlot( SLOT_HEAD, "Head" );
-    #   endif
-    #  endif*/
 
     InitializeGeometry();
 }
 # endif // __MAPPER
 
-//****************************************************************************************************************************** Geometry initialization
+//__________________________________________________________________________________________________________________________________________________________________________
+////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////   GEOMETRY   //////////////////////////////
+
 void InitializeGeometry()
 {
-	__MapHexagonal     = false;    // TRUE - hexagonal, FALSE - square
-	__MapHexWidth      = 36;       // Hex/square width
-	__MapHexHeight     = 18;       // Hex/square height
-	__MapHexLineHeight = 9;        // Hex/square line height
-	__MapTileOffsX     = 18;       // Tile default offset X
-	__MapTileOffsY     = 18+1;       // Tile default offset Y
-	__MapTileStep      = 1;        // Tile step
-	__MapRoofOffsX     = 18;       // Roof default offset X
-	__MapRoofOffsY     = -72;      // Roof default offset Y
-	__MapRoofSkipSize  = 2;        // Default length (in hexes/squares) of roof tiles
-	__MapCameraAngle   = 30.0f;    // Angle for 3d critters rendering
-	__MapSmoothPath    = false;    // Enable pathfinding path smoothing
+	__MapHexagonal     = false; // TRUE - hexagonal, FALSE - square
+	__MapHexWidth      = 36   ; // Hex/square width
+	__MapHexHeight     = 18   ; // Hex/square height
+	__MapHexLineHeight = 9    ; // Hex/square line height
+	__MapTileOffsX     = 18   ; // Tile default offset X
+	__MapTileOffsY     = 18+1 ; // Tile default offset Y
+	__MapTileStep      = 1    ; // Tile step
+	__MapRoofOffsX     = 18   ; // Roof default offset X
+	__MapRoofOffsY     = -72  ; // Roof default offset Y
+	__MapRoofSkipSize  = 2    ; // Default length (in hexes/squares) of roof tiles
+	__MapCameraAngle   = 30.0f; // Angle for 3d critters rendering
+	__MapSmoothPath    = false; // Enable pathfinding path smoothing
 	__MapDataPrefix    = "Geometry/tactics_"; // Path and prefix for names used for geometry sprites
 }

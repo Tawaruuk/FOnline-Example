@@ -6,23 +6,19 @@ void ModuleInit()
 	__EventCritterAnimation.Subscribe( OnCritterAnimation );
 }
 
-
-
 // modelHash - ModelName из прототипа криттера
-void OnCritterAnimation( hash modelHash, uint anim1, uint anim2, uint& pass, uint& flags, int& ox, int&oy, string& funcReturn)
+void OnCritterAnimation( hash modelHash, uint anim1, uint anim2, uint& pass, uint& flags, int& ox, int&oy, string& funcReturn )
 {
-    string animName = GetHashStr(modelHash);
-
+    string animName = GetHashStr( modelHash );
     animName = animName.substr( 0, animName.length()-4 );
-    if (modelHash==0) animName="Art/Critters/TribalFemale";
+    if ( modelHash == 0 ) animName = "Art/Critters/TribalFemale";
     animName += "$";
 
-    switch(anim2) {
+    switch ( anim2 ) {
         case ANIM2_WALK : animName += "StandWalk"; break;
         case ANIM2_RUN  : animName += "StandRun" ; break;
         default         : animName += "Default"  ; break;
     }
 
-	funcReturn=animName+".spr";
-	Log(funcReturn);
+	funcReturn = animName + ".spr";
 }

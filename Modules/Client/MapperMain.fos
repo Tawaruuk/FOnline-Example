@@ -66,40 +66,48 @@ void OnRenderIface( uint layer )
 //****************************************************************************************************************************** Inspector properties
 void OnInspectorProperties( Entity entity, int[] properties )
 {
+    int[] newProperties = {};
+
+    // Items
     Item item  = cast< Item >( entity );
     if( item !is null ) {
-
-        properties = array< int > = {
-            0, 0, 0,
-            ItemProperty::Type,
-            ItemProperty::HexX,
-            ItemProperty::HexY,
-            0,
-            ItemProperty::PicMap,
-            ItemProperty::OffsetX,
-            ItemProperty::OffsetY
-        };
+        newProperties.insertLast( ItemProperty::Type );
+        newProperties.insertLast( ItemProperty::HexX );
+        newProperties.insertLast( ItemProperty::HexY );
+        newProperties.insertLast( 0 );
+        newProperties.insertLast( ItemProperty::PicMap  );
+        newProperties.insertLast( ItemProperty::OffsetX );
+        newProperties.insertLast( ItemProperty::OffsetY );
+        newProperties.insertLast( 0 );
+        newProperties.insertLast( ItemProperty::BlockLines );
+        newProperties.insertLast( 0 );
+        newProperties.insertLast( ItemProperty::ScriptId );
 
         if( item.IsLight )
         {
-            properties.insertLast( 0 );
-            properties.insertLast( ItemProperty::LightIntensity );
-            properties.insertLast( ItemProperty::LightDistance  );
-            properties.insertLast( ItemProperty::LightFlags     );
-            properties.insertLast( ItemProperty::LightColor     );
+            newProperties.insertLast( 0 );
+            newProperties.insertLast( ItemProperty::LightIntensity );
+            newProperties.insertLast( ItemProperty::LightDistance  );
+            newProperties.insertLast( ItemProperty::LightFlags     );
+            newProperties.insertLast( ItemProperty::LightColor     );
         }
     }
+
+    // Critters
     Critter cr = cast< Critter >( entity );
-    if( cr !is null )
-    {
-        properties = array< int > =
-        {
-            CritterProperty::HexX,
-            CritterProperty::HexY,
-            CritterProperty::Dir,
-            0,
-            CritterProperty::ScriptId
-        };
+    if( cr !is null ){
+        newProperties.insertLast( CritterProperty::HexX );
+        newProperties.insertLast( CritterProperty::HexY );
+        newProperties.insertLast( CritterProperty::Dir  );
+        newProperties.insertLast( 0 );
+        newProperties.insertLast( CritterProperty::ScriptId );
+        newProperties.insertLast( CritterProperty::DialogId );
+        newProperties.insertLast( CritterProperty::BagId    );
+        newProperties.insertLast( CritterProperty::TeamId   );
+        newProperties.insertLast( CritterProperty::NpcRole  );
+        newProperties.insertLast( CritterProperty::ReplicationTime );
+
     }
 
+    properties.set( newProperties );
 }

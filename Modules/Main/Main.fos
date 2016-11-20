@@ -6,37 +6,28 @@ void ModuleInit()
 {
     Config::InitializeGame();
 
-    __EventStart             .Subscribe( OnStart              );
     __EventGenerateWorld     .Subscribe( OnGenerateWorld      );
+    __EventStart             .Subscribe( OnStart              );
+    __EventCritterInit       .Subscribe( OnCritterInit        );
     __EventPlayerRegistration.Subscribe( OnPlayerRegistration );
     __EventPlayerLogin       .Subscribe( OnPlayerLogin        );
-    __EventCritterInit       .Subscribe( OnCritterInit        );
-    __EventMapCheckLook      .Subscribe( OnMapCheckLook       );
+}
+
+//****************************************************************************************************************************** Generation of new world
+// Called before OnStart
+bool OnGenerateWorld( uint16& multiplier, uint16& year, uint16& month, uint16& day, uint16& hour, uint16& minute )
+{
+    //*DEBUG*/Log("OnGenerateWorld");
+    Globals.LocationStartId = CreateLocation( Content::Location::Start, 1, 1, null );
+	return true;
 }
 
 //****************************************************************************************************************************** Server start
+// // Called after OnGenerateWorld
 bool OnStart()
 {
+    //*DEBUG*/Log("OnStart");
 	return true;
-}
-
-//****************************************************************************************************************************** World generate
-bool OnGenerateWorld(uint16& multiplier, uint16& year, uint16& month, uint16& day, uint16& hour, uint16& minute )
-{
-    Globals.LocationTestId = CreateLocation(Content::Location::TestLoc, 1, 1, null);
-	return true;
-}
-
-bool OnPlayerRegistration( uint id, string login, uint& unknown1, uint& unknown2, string& unknown3 )
-{
-    Log("OnPlayerRegistration");
-    return true;
-}
-
-bool OnPlayerLogin( uint id, string login, uint unknown1, uint& unknown2, uint& unknown3, string& unknown4 )
-{
-    Log("OnPlayerLogin");
-    return true;
 }
 
 //****************************************************************************************************************************** Critter initialization
@@ -44,19 +35,27 @@ bool OnPlayerLogin( uint id, string login, uint unknown1, uint& unknown2, uint& 
 // Default start position for players is center of global map.
 void OnCritterInit( Critter cr, bool firstTime )
 {
-    if(firstTime) {
-        if(cr.IsPlayer()) {
-			cr.TransitToMap(GetLocation(Globals.LocationTestId).GetMapByIndex(0).Id, 13, 13, 0);
+    //*DEBUG*/Log("OnCritterInit");
+    if ( firstTime ) {
+        if ( cr.IsPlayer() ) {
+            Location loc = GetLocation( Globals.LocationStartId );
+            Map map = loc.GetMapByIndex( 0 );
+			cr.TransitToMap( map.Id, 10, 10, 0 );
 		}
 	}
 }
 
-//****************************************************************************************************************************** // Manual visibility check
-// NOW: turned OFF, see config.fos ??
-// [396] События CRITTER_EVENT_SHOW_CRITTER_X и CRITTER_EVENT_HIDE_CRITTER_X при этом не вызываются. ??
-bool OnMapCheckLook( const Map map, const Critter critter, const Critter target )
+//****************************************************************************************************************************** Player register
+bool OnPlayerRegistration( uint id, string login, uint& unknown1, uint& unknown2, string& unknown3 )
 {
-    Log("Call OnMapCheckLook");
+    /*DEBUG*/Log("OnPlayerRegistration");
+    return true;
+}
+
+//****************************************************************************************************************************** Player login
+bool OnPlayerLogin( uint id, string login, uint unknown1, uint& unknown2, uint& unknown3, string& unknown4 )
+{
+    /*DEBUG*/Log("OnPlayerLogin");
     return true;
 }
 

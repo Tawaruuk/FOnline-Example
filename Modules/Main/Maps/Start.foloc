@@ -1,4 +1,4 @@
 [ProtoLocation]
-MapProtos = TestMap
+MapProtos = Start
 MapEntrances = se_head 0
 AutoGarbage = false
