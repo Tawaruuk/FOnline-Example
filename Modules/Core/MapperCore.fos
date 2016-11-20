@@ -1,11 +1,5 @@
 // FOS Mapper Sort -8
 
-void ModuleInit()
-{
-
-	__MapHexagonal = false;
-}
-
 // Tabs
 #define TAB_CUSTOM0                     ( 0 )
 #define TAB_CUSTOM1                     ( 1 )

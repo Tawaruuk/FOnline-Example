@@ -22,7 +22,7 @@ PicMap  = Art/Items/FirePlace_01_NE.til
 OffsetX = 0
 OffsetY = 5
 
-BlockLines       = 610121
+BlockLines       = 6 1 0 1 2 1
 
 [ProtoItem]#####################################################
     $Parent = FirePlace_01

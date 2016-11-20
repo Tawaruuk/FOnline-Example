@@ -3,4 +3,3 @@ $Inject = All
 WalkTime = 400
 RunTime = 200
 Cond = Alive
-#Level = 1    [684] Unknown property 'Level'

@@ -24,8 +24,6 @@
 # pragma event "EventCritterFinish( Critter critter, bool toDelete )"
 # pragma event "EventCritterIdle( Critter critter )"
 # pragma event "EventCritterGlobalMapIdle( Critter critter )"
-# pragma event "EventCritterDead( Critter critter, Critter killer )"
-# pragma event "EventCritterRespawn( Critter critter )"
 # pragma event "EventCritterCheckMoveItem( const Critter critter, const Item item, uint8 toSlot, const Item swapItem )"
 # pragma event "EventCritterMoveItem( Critter critter, Item item, uint8 fromSlot ) deferred"
 # pragma event "EventCritterShow( Critter critter, Critter showCritter ) deferred"
@@ -43,7 +41,6 @@
 # pragma event "EventCritterMessage( Critter critter, Critter receiver, int num, int value )"
 # pragma event "EventCritterTalk( Critter critter, Critter who, bool begin, uint talkers )"
 # pragma event "EventCritterBarter( Critter cr, Critter trader, bool begin, uint barterCount )"
-# pragma event "EventCritterKnockout( Critter critter, uint lostAp, uint dist )"
 # pragma event "EventCritterGetAttackDistantion( const Critter critter, const Item item, uint8 itemMode, uint& dist )"
 # pragma event "EventNpcPlaneBegin( Critter npc, NpcPlane plane, int, Critter, Item )"
 # pragma event "EventNpcPlaneEnd( Critter npc, NpcPlane plane, int, Critter, Item )"
@@ -458,17 +455,16 @@
 #pragma property Critter PrivateCommon const uint Anim2Life
 #pragma property Critter PrivateCommon const uint Anim2Knockout
 #pragma property Critter PrivateCommon const uint Anim2Dead
-#pragma property Critter PrivateCommon const uint Anim2KnockoutEnd
 #pragma property Critter PrivateServer const uint8[] GlobalMapFog
 #pragma property Critter PrivateServer const hash[] TE_FuncNum
 #pragma property Critter PrivateServer const uint[] TE_Rate
 #pragma property Critter PrivateServer const uint[] TE_NextTime
 #pragma property Critter PrivateServer const int[] TE_Identifier
 
-#pragma property Critter Protected int ActionPoints
 #pragma property Critter VirtualPrivateServer int SneakCoefficient
 #pragma property Critter VirtualProtected uint LookDistance
 
+#pragma property Critter Public           int8  Gender
 #pragma property Critter Protected        hash  NpcRole
 #pragma property Critter Protected        Team  TeamId
 #pragma property Critter Protected        int   BagId
@@ -478,7 +474,6 @@
 #pragma property Critter Public           uint  TalkDistance
 #pragma property Critter Public           int   ScaleFactor
 #pragma property Critter Public           int   CurrentHp
-#pragma property Critter PrivateCommon    int   CurrentAp
 #pragma property Critter Protected        uint  ApRegenerationTime
 #pragma property Critter PrivateCommon    uint  ApRegenerationTick
 #pragma property Critter PrivateServer    uint  MaxTalkers
@@ -562,17 +557,7 @@
 #pragma property Item Public uint8  SpriteCut
 #pragma property Item Public int8   DrawOrderOffsetHexY
 #pragma property Item Public uint8  IndicatorMax
-#pragma property Item Public string BlockLines
-#pragma property Item Public hash   ChildPid_0
-#pragma property Item Public hash   ChildPid_1
-#pragma property Item Public hash   ChildPid_2
-#pragma property Item Public hash   ChildPid_3
-#pragma property Item Public hash   ChildPid_4
-#pragma property Item Public string ChildLines_0
-#pragma property Item Public string ChildLines_1
-#pragma property Item Public string ChildLines_2
-#pragma property Item Public string ChildLines_3
-#pragma property Item Public string ChildLines_4
+#pragma property Item Public uint8[] BlockLines
 
 #pragma property Item Public bool IsHidden
 #pragma property Item Public bool IsFlat

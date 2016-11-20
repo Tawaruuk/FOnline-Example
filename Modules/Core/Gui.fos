@@ -3235,8 +3235,7 @@ bool IsConsoleActive( Object obj )
     }
 
     // Detect entity for drop menu
-    /* 699 fix */if( (DropMenu !is null) && (DropMenu.Cursor == __Cursor) )
-
+    if( DropMenu !is null && DropMenu.Cursor == __Cursor )
     {
         Entity prevEntity = DropMenu.SelectedEntity;
         DropMenu.SelectedEntity = null;
