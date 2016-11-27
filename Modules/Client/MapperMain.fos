@@ -102,7 +102,6 @@ void OnInspectorProperties( Entity entity, int[] properties )
         newProperties.insertLast( 0 );
         newProperties.insertLast( CritterProperty::ScriptId );
         newProperties.insertLast( CritterProperty::DialogId );
-        newProperties.insertLast( CritterProperty::BagId    );
         newProperties.insertLast( CritterProperty::TeamId   );
         newProperties.insertLast( CritterProperty::NpcRole  );
         newProperties.insertLast( CritterProperty::ReplicationTime );

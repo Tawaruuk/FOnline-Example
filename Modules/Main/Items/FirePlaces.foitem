@@ -2,8 +2,6 @@
 $Name       = _FirePlace
 Info        = 1
 Type        = Generic
-IsCanUse    = False
-IsCanPickUp = False
 
 DisableEgg  = True
 
