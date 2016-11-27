@@ -1,1 +1,1 @@
-START "IE" "Binaries\InterfaceEditor\InterfaceEditor.exe"
+START "IE" "SDK\Binaries\InterfaceEditor\InterfaceEditor.exe"
