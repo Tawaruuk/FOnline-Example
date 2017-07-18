@@ -54,11 +54,9 @@ void InitializeGame() //EXPORT//
     __BruteForceTick           = 100  ; // In milliseconds
     __NoAnswerShuffle          = false;
 
-    __CritterIdleTick          = 10000;
     __Breaktime                = 1200 ;
     __TimeoutTransfer          = 0    ;
     //__TimeoutBattle            = REAL_SECOND( 45 ); ?? 688: No matching signatures to 'REAL_SECOND'
-    __RtAlwaysRun              = false;
     __RunOnCombat              = false;
     __RunOnTransfer            = true ;
     __GlobalMapWidth           = 28   ; // Maximum 100
@@ -79,9 +77,6 @@ void InitializeGame() //EXPORT//
     // Rules for player name
     __MinNameLength            = 4    ; // Minimum 1
     __MaxNameLength            = 12   ; // Maximum 30
-    __ValidNameLettersCommon   = "_ .-1234567890";
-    __ValidNameLettersCulture1 = "AaBbCcDdEeFfGgHhIiJjKkLlMmNnOoPpQqRrSsTtUuVvWwXxYyZz";
-    __ValidNameLettersCulture2 = "АаБбВвГгДдЕеЁёЖжЗзИиЙйКкЛлМмНнОоПпРрСсТтУуФфХхЦцЧчШшЩщЪъЫыЬьЭэЮюЯя";
 
 //--- Client specific definitions ----------------------------------------------------------------------------------------------
 

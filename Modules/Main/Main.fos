@@ -18,7 +18,8 @@ void ModuleInit()
 bool OnGenerateWorld( uint16& multiplier, uint16& year, uint16& month, uint16& day, uint16& hour, uint16& minute )
 {
     //*DEBUG*/Log("OnGenerateWorld");
-    Globals.LocationStartId = CreateLocation( Content::Location::Start, 1, 1, null );
+    Location startLocation  = CreateLocation( Content::Location::Start, 1, 1, null );
+    Globals.LocationStartId = startLocation.Id;
 	return true;
 }
 
@@ -40,7 +41,7 @@ void OnCritterInit( Critter cr, bool firstTime )
         if ( cr.IsPlayer() ) {
             Location loc = GetLocation( Globals.LocationStartId );
             Map map = loc.GetMapByIndex( 0 );
-			cr.TransitToMap( map.Id, 10, 10, 0 );
+			cr.TransitToMap( map, 10, 10, 0 );
 		}
 	}
 }
@@ -48,14 +49,14 @@ void OnCritterInit( Critter cr, bool firstTime )
 //****************************************************************************************************************************** Player register
 bool OnPlayerRegistration( uint id, string login, uint& unknown1, uint& unknown2, string& unknown3 )
 {
-    /*DEBUG*/Log("OnPlayerRegistration");
+    /*DEBUG*/Log( "OnPlayerRegistration: id='" + id + "' login='" + login + "'" );
     return true;
 }
 
 //****************************************************************************************************************************** Player login
 bool OnPlayerLogin( uint id, string login, uint unknown1, uint& unknown2, uint& unknown3, string& unknown4 )
 {
-    /*DEBUG*/Log("OnPlayerLogin");
+    /*DEBUG*/Log( "OnPlayerLogin: id='" + id + "' login='" + login + "'" );
     return true;
 }
 

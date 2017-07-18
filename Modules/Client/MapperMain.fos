@@ -93,20 +93,20 @@ void OnInspectorProperties( Entity entity, int[] properties )
         }
     }
 
-    // Critters
-    Critter cr = cast< Critter >( entity );
-    if( cr !is null ){
-        newProperties.insertLast( CritterProperty::HexX );
-        newProperties.insertLast( CritterProperty::HexY );
-        newProperties.insertLast( CritterProperty::Dir  );
-        newProperties.insertLast( 0 );
-        newProperties.insertLast( CritterProperty::ScriptId );
-        newProperties.insertLast( CritterProperty::DialogId );
-        newProperties.insertLast( CritterProperty::TeamId   );
-        newProperties.insertLast( CritterProperty::NpcRole  );
-        newProperties.insertLast( CritterProperty::ReplicationTime );
+    // Critters ?? Не работает в 789
+    // Critter cr = cast< Critter >( entity );
+    // if( cr !is null ){
+        // newProperties.insertLast( CritterProperty::HexX );
+        // newProperties.insertLast( CritterProperty::HexY );
+        // newProperties.insertLast( CritterProperty::Dir  );
+        // newProperties.insertLast( 0 );
+        // newProperties.insertLast( CritterProperty::ScriptId );
+        // newProperties.insertLast( CritterProperty::DialogId );
+        // newProperties.insertLast( CritterProperty::TeamId   );
+        // newProperties.insertLast( CritterProperty::NpcRole  );
+        // newProperties.insertLast( CritterProperty::ReplicationTime );
 
-    }
+    // }
 
     properties.set( newProperties );
 }
