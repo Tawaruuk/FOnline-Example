@@ -140,12 +140,14 @@ namespace Login
 
         void OnLMouseClick() override
         {
-            string propsStr;
-            // Нужно для передачи характеристик персонажа
+            // Раньше это нужно для передачи характеристик персонажа
+            // как сейчас - пёс его знает
+            //string propsStr;
             //for( uint i = 0; i < RegProps.length(); i++ )
             //    if( RegProps.getValue( i ) != 0 )
             //        propsStr += " " + RegProps.getKey( i ) + " " + RegProps.getValue( i );
-            CustomCall( "Register testLogin testPass" + propsStr );
+            // CustomCall( "Register testLogin testPass" + propsStr );
+            CustomCall( "Register testLogin testPass");
             
             Gui::EngineCallback_HideScreen(CLIENT_SCREEN_REGISTRATION);
         }

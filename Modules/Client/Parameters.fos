@@ -1,10 +1,10 @@
 // FOS Server Client
 
-uint CritterSetLookDistance( Critter& cr ) {
+uint CritterSetLookDistance( Critter cr ) {
 	return 20;
 }
 
-int CritterGetSneakCoefficient( const Critter& cr )
+int CritterGetSneakCoefficient( const Critter cr )
 {
     return 10;
 }
