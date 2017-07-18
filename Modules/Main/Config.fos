@@ -101,7 +101,7 @@ void InitializeGame() //EXPORT//
     __CritterFidgetTime     = 50000; //?? Что это?
 
     //__Anim2CombatBegin      = ANIM2_BEGIN_COMBAT;      <
-    //__Anim2CombatIdle       = ANIM2_IDLE_COMBAT;       < ?? ИНАЧЕ НЕ ПУСКАЕТСЯ 681
+    //__Anim2CombatIdle       = ANIM2_IDLE_COMBAT;       < ?? 681-789: "is not declared"
     //__Anim2CombatEnd        = ANIM2_END_COMBAT;        <
 
     __ConsoleHistorySize    = 20;
@@ -141,7 +141,7 @@ void InitializeGame() /* EXPORT */
     __ConsoleHistorySize    = 100  ;
 
     //__Anim2CombatBegin      = ANIM2_BEGIN_COMBAT;  <
-    //__Anim2CombatIdle       = ANIM2_IDLE_COMBAT;   < ?? ИНАЧЕ НЕ ПУСКАЕТСЯ 691
+    //__Anim2CombatIdle       = ANIM2_IDLE_COMBAT;   < ?? 691-789: "is not declared"
     //__Anim2CombatEnd        = ANIM2_END_COMBAT;    <
 
     __Enable3dRendering     = false;
