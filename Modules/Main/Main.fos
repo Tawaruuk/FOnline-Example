@@ -47,16 +47,16 @@ void OnCritterInit( Critter cr, bool firstTime )
 }
 
 //****************************************************************************************************************************** Player register
-bool OnPlayerRegistration( uint id, string login, uint& unknown1, uint& unknown2, string& unknown3 )
+bool OnPlayerRegistration( uint ip, string login, uint& textMsg, uint& strNum, string& lexems )
 {
-    /*DEBUG*/Log( "OnPlayerRegistration: id='" + id + "' login='" + login + "'" );
+    /*DEBUG*/Log( "OnPlayerRegistration: ip='" + ip + "' login='" + login + "'" );
     return true;
 }
 
 //****************************************************************************************************************************** Player login
-bool OnPlayerLogin( uint id, string login, uint unknown1, uint& unknown2, uint& unknown3, string& unknown4 )
+bool OnPlayerLogin( uint ip, string login, uint unknown1, uint& unknown2, uint& unknown3, string& unknown4 )
 {
-    /*DEBUG*/Log( "OnPlayerLogin: id='" + id + "' login='" + login + "'" );
+    /*DEBUG*/Log( "OnPlayerLogin: ip='" + ip + "' login='" + login + "'" );
     return true;
 }
 
